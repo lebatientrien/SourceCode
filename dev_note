@@ -1,0 +1,26 @@
+#from brisque import BRISQUE
+
+##Replace line 40 of `lib/site-packages/brisque/brisque.py’ with:
+
+# Only convert image to grayscale if RGB
+#        if len(image.shape) == 3:
+#            gray_image = skimage.color.rgb2gray(image)
+#        else:
+#            gray_image = image
+
+'''def score(self):
+        image = self.load_image()
+        image = self.remove_alpha_channel(image)
+        # Only convert image to grayscale if RGB
+        if len(image.shape) == 3:
+            gray_image = skimage.color.rgb2gray(image)
+        else:
+            gray_image = image
+        mscn_coefficients = self.calculate_mscn_coefficients(gray_image, 7, 7/6)
+        coefficients = self.calculate_pair_product_coefficients(mscn_coefficients)
+        brisque_features = self.calculate_brisque_features(gray_image, kernel_size=7, sigma=7/6)
+        downscaled_image = cv2.resize(gray_image, None, fx=1/2, fy=1/2, interpolation = cv2.INTER_CUBIC)
+        downscale_brisque_features = self.calculate_brisque_features(downscaled_image, kernel_size=7, sigma=7/6)
+        brisque_features = np.concatenate((brisque_features, downscale_brisque_features))
+
+        return self.calculate_image_quality_score(brisque_features)'''
